@@ -13501,3 +13501,28 @@ body.home .page-content {
     margin-top: -56px; /* Padding added to the top of the body */
   }
 }
+
+/* Google maps related */
+.rd-google-map, #google-map {
+  position: relative;
+}
+@media (min-width: 1200px) {
+  .block-absolute-right {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+  }
+  .rd-google-map {
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+  }
+  #google-map {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
