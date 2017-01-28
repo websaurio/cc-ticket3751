@@ -40,7 +40,7 @@
 </head>
 
 <!-- InstanceBeginEditable name="body" -->
-<body>
+<body class="home">
 <!-- InstanceEndEditable -->
 <!-- The Main Wrapper -->
 <div class="page">
@@ -493,8 +493,15 @@
 		'/images/slider/harbour-town-clubhouse.jpg',
 		'/images/slider/sav-harley-davidson.jpg'
 	], 6000));
+
+	var ua = window.navigator.userAgent;
+	var iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+	var webkit = !!ua.match(/WebKit/i);
+	var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+	if(iOSSafari) {
+		$('html').addClass('ios-safari');
+	}
 </script>
 <!-- InstanceEndEditable -->
-
 </body>
 <!-- InstanceEnd --></html>

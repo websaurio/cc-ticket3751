@@ -13481,3 +13481,23 @@ img.mfp-img {
 .page-footer {
   margin-top: -2px;
 }
+
+/* This fixes the rd parallax issue (the extra height at the beginning) */
+body.home .page-content {
+  position: relative !important; /* just in case */
+}
+
+@media (max-width: 425px) {
+  /* This removes the extra height due the toolbars on safari */
+  .ios-safari .page-content {
+    margin-top: -126px; /* - 70px - 56px = Toolbars - Padding */
+  }
+  /* Use this to keep the height of the background as it was before, as in the customer's original state */
+  html.desktop body.home .page-content {
+    margin-top: -56px;
+  }
+  html.mobile:not(.ios-safari) body.home .page-content{
+    /* padding-top: 0; /* This will modify the height of the backgrounds so... */
+    margin-top: -56px; /* Padding added to the top of the body */
+  }
+}
