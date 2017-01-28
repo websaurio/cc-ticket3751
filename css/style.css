@@ -13469,3 +13469,15 @@ img.mfp-img {
 .rd-navbar-fixed .rd-navbar-nav li a{
   color: #fff;
 }
+
+/* Fix for the menu animation, and took outside the js code */
+.rd-navbar-fixed .rd-navbar-nav,
+.rd-navbar-fixed.active .rd-navbar-nav {
+  transition: all 0.3s;
+  visibility: visible;
+}
+
+/* Fix for the footer projects issue. */
+.page-footer {
+  margin-top: -2px;
+}
